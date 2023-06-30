@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+// Before React 18
+//import ReactDOM from "react-dom";
 
 function App() {
   return <h1>Hello Ashu!</h1>;
@@ -12,3 +14,6 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// Before React 18
+//ReactDOM.render(</ App>)

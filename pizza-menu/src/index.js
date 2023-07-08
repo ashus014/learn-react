@@ -4,7 +4,11 @@ import ReactDOM from "react-dom/client";
 //import ReactDOM from "react-dom";
 
 function App() {
-  return <h1>Hello Ashu!</h1>;
+  return (
+    <div>
+      <h1>Hello AshuSingh!</h1>
+    </div>
+  );
 }
 
 // React 18

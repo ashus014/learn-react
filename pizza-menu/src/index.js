@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 // Before React 18
 //import ReactDOM from "react-dom";
 
@@ -50,7 +51,7 @@ const pizzaData = [
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
@@ -59,22 +60,24 @@ function App() {
 }
 
 function Header() {
+  //const style = { color: "red", fontSize: "48px", textTransform: "uppercase" };
+  const style = {};
   return (
-    <h1 style={{ color: "red", fontSize: "48px", textTransform: "uppercase" }}>
-      Fast React Pizza Co.
-    </h1>
+    <header className="header">
+      <h1 style={style}>Fast React Pizza Co.</h1>
+    </header>
   );
 }
 
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
       <Pizza />
-    </div>
+    </main>
   );
 }
 
@@ -87,7 +90,9 @@ function Footer() {
   // if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
 
   return (
-    <footer>{new Date().toLocaleTimeString()}. We're currently open!</footer>
+    <footer className="footer">
+      {new Date().toLocaleTimeString()}. We're currently open!
+    </footer>
   );
   // return React.createElement("footer", null, "We're currently open!");
 }
@@ -96,7 +101,7 @@ function Pizza() {
   return (
     <div>
       <img src="pizzas/spinaci.jpg" alt="Spinaci Pizza"></img>
-      <h2>Pizza Spinaci</h2>
+      <h3>Pizza Spinaci</h3>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
   );
